@@ -39,11 +39,22 @@
 				if ( radios[i].checked ) { // radio checked?
 					val = radios[i].value; // if so, hold its value in val
 					break; // and break out of for loop
-				}
+				}				
 			}
+			
+
 		return val; // return value of checked radio or undefined if none checked
 		}
-	document.getElementById('demoForm').onsubmit = function() {
+		document.getElementById('demoForm').addEventListener("click", function(){
+		// this (keyword) refers to form to which onsubmit attached
+		// 'ship' is name of radio button group
+		var val = getRadioVal(this, 'ship');
+		// display value obtained
+		console.log("the this " + this);
+		console.log(val);
+		alert(val);
+	});
+	/*document.getElementById('demoForm').onsubmit = function() {
 		// this (keyword) refers to form to which onsubmit attached
 		// 'ship' is name of radio button group
 		var val = getRadioVal(this, 'ship');
@@ -51,6 +62,11 @@
 		console.log(val);
 		alert(val);
 	}
+	document.getElementById('demoForm').addEventListener("click", function(){
+		console.log("inside");
+		var test = getRadioVal(demoForm,"ship");
+		console.log(test);
+	});*/
 	
 </script>
 </body>
