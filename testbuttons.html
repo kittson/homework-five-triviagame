@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title></title>
+</head>
+<body>
+	<form action="#" method="post" class="demoForm" id="demoForm">
+		<fieldset>
+			<legend>Example 1</legend>			
+			<p>
+				<label><input type="radio" name="ship" value="std"  /> Standard Ground</label>
+				<label><input type="radio" name="ship" value="2day" /> Second Day</label>
+				<label><input type="radio" name="ship" value="1day" /> Overnight</label>
+				<label><input type="radio" name="ship" value="hold" /> Pick up</label>
+			</p>
+
+			<p><button type="button" name="getVal">Get Value of Selected</button></p>
+		</fieldset>
+	</form>
+
+	<form name="go">
+		<legend>Example 2</legend>
+		<p>
+			<label><input type="radio" name="C1" onclick="document.bgColor='lightblue'">blue </label>
+			<label><input type="radio" name="C2" onclick="document.bgColor='lightyellow'">yellow </label>
+			<label><input type="radio" name="C3" onclick="document.bgColor='lightgreen'">green </label>
+		</p>
+	</form>
+
+	<script type="text/javascript">
+	//for example 1
+		function getRadioVal(form, name) {
+			var val;
+		// get list of radio buttons with specified name    
+		var radios = form.elements[name];
+
+		// loop through list of radio buttons
+			for (var i=0, len=radios.length; i<len; i++) {
+				if ( radios[i].checked ) { // radio checked?
+					val = radios[i].value; // if so, hold its value in val
+					break; // and break out of for loop
+				}
+			}
+		return val; // return value of checked radio or undefined if none checked
+		}
+	document.getElementById('demoForm').onsubmit = function() {
+		// this (keyword) refers to form to which onsubmit attached
+		// 'ship' is name of radio button group
+		var val = getRadioVal(this, 'ship');
+		// display value obtained
+		console.log(val);
+		alert(val);
+	}
+	
+</script>
+</body>
+</html>
+
