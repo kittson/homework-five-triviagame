@@ -43,7 +43,7 @@ $(document).ready(function(){
 				}				
 			}
 		return val; // return value of checked radio or undefined if none checked
-	}//getRadioVal
+		}//getRadioVal
 	document.getElementById('demoForm').addEventListener("click", function(){
 		// this (keyword) refers to form to which onsubmit attached
 		// 'theQuestion' is name of radio button group
