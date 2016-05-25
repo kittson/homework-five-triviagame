@@ -1,53 +1,66 @@
+//homework-five, trivia game
+//trivia_code.js
+// see trivia_questions.js for question lists
 
 $(document).ready(function(){
 	$('.btn-start').on('click', function() {
 		location.href = "./game.html";
 	});
+	var flagCorrectAnswer;
+	var aChoice;
+	var answerValArry;
+	var answerVal;
 
-	message = questions[0];	// this is the question being asked
-	$('.question-message').text(message);
+	//// this is the question being asked
+	message = questions[1];	
+	$('.question-message').text(message);	
 
-	//var aChoice;
-	//var answerVal;
+	//console.log("some print outs " + choiceFrenchRev.answerZero[0] + "  " + choiceFrenchRev.answerZero[1]);
 
+	////this sets up the choices for the question
 	function setAnswers( whichQuestion) {
-		var aChoice;
-		var answerVal;
+		//var aChoice;
+		//var answerVal;
 		for (var i=0; i<Object.keys(whichQuestion).length; i++) {
-			// console.log("whichQuestion and length " + whichQuestion + Object.keys(whichQuestion).length);
-			//console.log("and the answer? " + Object.keys(whichQuestion)[i]);			
-			//console.log("and the answer text? " + whichQuestion.i);
-
-			//aChoice = $(whichQuestion)[i];
-		   aChoice = Object.keys(whichQuestion)[i];
-		   //answerVal = $(whichQuestion).aChoice;
-		   answerVal = whichQuestion[aChoice];
-			console.log(" answerVal is " + answerVal);
-
-		   document.getElementById(aChoice).innerHTML = answerVal;
-		   console.log("a loop ");
+		   aChoice = Object.keys(whichQuestion)[i];		 
+		   answerValArry = whichQuestion[aChoice];
+		   answerVal = answerValArry[0];
+			//console.log(" answerVal is " + answerVal);
+			if (answerValArry[1] === true) {
+				flagCorrectAnswer = aChoice;
+				console.log(flagCorrectAnswer);
+			};
+		   document.getElementById(aChoice).innerHTML = answerVal;		   
 		};
 	};
 	
-	setAnswers(choiceFrenchRev);
+	setAnswers(choiceJeSuisCharlie);
+	console.log(flagCorrectAnswer);
 
-	function getRadioVal(form, name) {
-		var val;
+
+	var radVal;
+	////this is the part that listens for the radio button answer
+	function getRadioVal(form, name) {		
 		// get list of radio buttons with specified name    
 		var radios = form.elements[name];
-
 		// loop through list of radio buttons
 			for (var i=0, len=radios.length; i<len; i++) {
 				if ( radios[i].checked ) { // radio checked?
-					val = radios[i].value; // if so, hold its value in val
+					var val = radios[i].value; // if so, hold its value in val
+					console.log("radios " + radios);
+					console.log(i);
+					console.log(val);
 					break; // and break out of for loop
+					//console.log(val);
+					//return(val);
 				}				
-			}
-		return val; // return value of checked radio or undefined if none checked
+			}			
 	}//getRadioVal
+
 	document.getElementById('demoForm').addEventListener("click", function(){
+	//document.getElementById('submitButton').addEventListener("click", function(){
 		// this (keyword) refers to form to which onsubmit attached
-		// 'theQuestion' is name of radio button group
+		// 'anAnswer' is name of radio button group
 		var val = getRadioVal(this, 'anAnswer');
 		// display value obtained
 		console.log("the this " + this);
@@ -55,11 +68,5 @@ $(document).ready(function(){
 		alert(val);
 	});
 
-/*	for ( var i =0; i < checkBoxes.length; i++) {
-		//checkBoxes[i].addEventListener("click", setAnswer()
-		
-		checkBoxes[i].addEventListener("click", function() {
-			console.log(i);
-		});
-	}	*/
+
 });

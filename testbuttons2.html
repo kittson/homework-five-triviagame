@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body>
+<form onsubmit="return validateSubmit(this);" action="#">
+
+
+<!-- Choose "3"
+<input type="radio" name="a" value="1" onchange="if(!validateRadio(this,3)) alert('Incorrect');"> 1
+<input type="radio" name="a" value="2" onchange="if(!validateRadio(this,3)) alert('Incorrect');"> 2
+<input type="radio" name="a" value="3" onchange="if(!validateRadio(this,3)) alert('Incorrect');"> 3
+<input type="radio" name="a" value="4" onchange="if(!validateRadio(this,3)) alert('Incorrect');"> 4 -->
+
+<p>Choose "2"
+<input type="radio" name="b" value="1"> 1 
+<input type="radio" name="b" value="2"> 2
+<input type="radio" name="b" value="3"> 3
+<input type="radio" name="b" value="4"> 4
+
+</p><p><input type="submit" value="Submit">
+</p></form>
+</body>
+</html>
+
+
+<script type="text/javascript">
+function validateRadio( obj,correct ){
+    var result = 0;
+    for(var i=0; i<obj.length; i++){
+        if(obj[i].checked==true && obj[i].value==correct){
+            result = 1;
+        }
+    }
+    if(!result && obj.value == correct){
+        result = 1;
+    }
+    return result
+}
+
+function validateSubmit( obj ){
+    var err = '';
+    if( !validateRadio( obj.a,3 ) ){ err+='\nFirst radio is wrong'; }
+    if( !validateRadio( obj.b,2 ) ){ err+='\nSecond radio is wrong'; }
+    if( err.length ){ 
+        alert('Problem:'+err); 
+        return false; 
+    }
+    else{ 
+        alert('Good Job -- Submitting'); 
+        return true; 
+    }
+}
+</script>

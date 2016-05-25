@@ -2,14 +2,25 @@
 <html lang="en">
 
 <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <title>Trivia Game</title>
+  <!-- jQuery -->
+  <script src="js/jquery.js"></script>
 
-    <title>Trivia Game</title>
+  <!-- Bootstrap Core JavaScript -->
+  <script src="js/bootstrap.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/jquery.fittext.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script type="text/javascript" src="trivia_questions.js"></script>
+  <script type="text/javascript" src="trivia_code.js"></script>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -52,18 +63,18 @@
                         <form action="#" method="post" class="demoForm" id="demoForm">
                           <fieldset>
                             <!-- <legend>Click One Answer</legend>  -->     
-                              
-                                <p><input type="radio" name="anAnswer" value="22">
-                                <label id="answerZero"> </label></p>
-                                <p><input type="radio" name="anAnswer" value="22">
-                                <label for="answerOne"> </label></p>
-                                <p><input type="radio" name="anAnswer" value="22">
-                                <label for="answerTwo"> </label></p>
-                                <p><input type="radio" name="anAnswer" value="22">
-                                <label for="answerThree"> </label></p>
-                                
-                              
-                              <p><button class="btn btn-start btn-primary btn-xl" type="button" name="getVal">Submit Answer</button></p>
+                            <p><input type="radio" name="anAnswer" value="20">
+                            <label id="answerZero"> </label></p>
+                            <p><input type="radio" name="anAnswer" value="21">
+                            <label id="answerOne"> </label></p>
+                            <p><input type="radio" name="anAnswer" value="22">
+                            <label id="answerTwo"> </label></p>
+                            <p><input type="radio" name="anAnswer" value="23">
+                            <label id="answerThree"> </label></p>                                                              
+                            <p><input type="button" class="btn-start btn-xl btn-start btn-primary" value="Soumettre réponse" onClick="getRadioVal(demoForm, value)"></p>
+                            <!-- <p><input type="submit" onclick="getRadioVal();return(false);" name="save" value="Save" /></p> -->
+                            <!-- <p><input type="submit" onclick="submitFunc();return(false);" name="save" value="Save" /></p> -->
+                            <!-- <p><input type="submit" value="Soumettre réponse" id="submitButton" class="btn btn-start btn-primary btn-xl" name="getVal"></p> -->
                           </fieldset>
                         </form>
                     
@@ -76,19 +87,7 @@
 
 
 
-  <!-- jQuery -->
-  <script src="js/jquery.js"></script>
-
-  <!-- Bootstrap Core JavaScript -->
-  <script src="js/bootstrap.min.js"></script>
-
-  <!-- Plugin JavaScript -->
-  <script src="js/jquery.easing.min.js"></script>
-  <script src="js/jquery.fittext.js"></script>
-  <script src="js/wow.min.js"></script>
-  <script type="text/javascript" src="trivia_questions.js"></script>
-  <script type="text/javascript" src="trivia_code.js"></script>
-
+  
 
 </body>
 

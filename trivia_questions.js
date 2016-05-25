@@ -4,24 +4,24 @@
 
 var questions = [];
 var choiceFrenchRev = {
-    answerZero: "five years, from 1790 through 1794",
-    answerOne: "eleven years, from 1789 through 1799",
-    answerTwo: "two years, from 1888 through 1889",
-    answerThree: "fifteen years, from 1794 through 1808"    
+    answerZero: ["five years, from 1790 through 1794", false],
+    answerOne: ["eleven years, from 1789 through 1799", true],
+    answerTwo: ["two years, from 1888 through 1889", false],
+    answerThree: ["fifteen years, from 1794 through 1808", false]    
 };
 
 var choiceJeSuisCharlie = {
-    answerZero: "Je suis la liberté d\x27expression",
-    answerOne: "Liberté, Égalité, Fraternité",
-    answerTwo: "Je Suis Charlie",
-    answerThree: "We Are Charlie Hebdo"    
+    answerZero: ["Je suis la liberté d\x27expression", false],
+    answerOne: ["Liberté, Égalité, Fraternité", false],
+    answerTwo: ["Je Suis Charlie", true],
+    answerThree: ["We Are Charlie Hebdo", false]    
 };
 
 var choiceEiffel = {
-    answerZero: "six inches",
-    answerOne: "five feet",
-    answerTwo: "five centimeters",
-    answerThree: "fifteen inches"    
+    answerZero: ["six inches", true],
+    answerOne: ["five feet", false],
+    answerTwo: ["five centimeters", false],
+    answerThree: ["fifteen inches", false]    
 };
 var answers = [];
 var congratulations = [];
