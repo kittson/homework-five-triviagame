@@ -98,6 +98,6 @@ p {
 
 #choicesArea {
         position: relative;
-        top: 70%;       
+        /*top: 70%;*/       
         background-position: center;
 }

@@ -30,38 +30,48 @@
                 <header>
                     <div class="header-content bg-primary">
                         <div class="header-content-inner">
-                            <img src="images/marianne.png" alt="delacroix liberte" height="100%" width="100%">
-                            <div class="col-lg-8 col-lg-offset-2 text-center">
-                                <h2 class="question-message"></h2>
-                                <hr class="light">
-                                <p class="text-faded">
-
-
-                                </p>
-                                
-                            </div>
+                            Trivia
                         </div>
                     </div>
                 </header>
             </div>
         </div>
     </div>
-    <div class="row">
 
-    </div>
+
+    <main class="row">
+      <div>
+       <img src="images/marianne.png" alt="delacroix liberte">
+      </div>
+      <div class="col-lg-8 col-lg-offset-2 text-center">
+          <h2 class="question-message"></h2>
+          <hr class="light">
+          <p class="text-faded">
+
+
+          </p>
+          
+      </div>
+    </main>
     
     <section class="bg-dark" id="choicesArea">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Click One Answer</h2>
+                    <!-- <h2 class="section-heading">Click One Answer</h2> -->
                     <hr class="light">
-                    <div class="radio-group">
-                        
-                            <input type="radio" name="theQuestion" id="questionGroup" value="22" >Radio Box 1
-                            <input type="radio" name="theQuestion" id="questionGroup" value="44" >Radio Box 2
-                            <input type="radio" name="theQuestion" id="questionGroup" value="55" >Radio Box 3
-                    </div>
+                    
+                        <form action="#" method="post" class="demoForm" id="demoForm">
+                          <fieldset>
+                            <legend>Click One Answer</legend>      
+                              <p>
+                                <label><input type="radio" name="anAnswer" id="questionGroup" value="22" >Radio Box 1 </label>
+                                <label><input type="radio" name="anAnswer" id="questionGroup" value="44" >Radio Box 2 </label>
+                                <label><input type="radio" name="anAnswer" id="questionGroup" value="55" >Radio Box 3 </label>
+                              </p>
+                              <p><button type="button" name="getVal">Get Value of Selected</button></p>
+                          </fieldset>
+                        </form>
                     
 
               </div>
