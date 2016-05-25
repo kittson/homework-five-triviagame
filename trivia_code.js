@@ -18,12 +18,13 @@ $(document).ready(function(){
 			//console.log("and the answer? " + Object.keys(whichQuestion)[i]);			
 			//console.log("and the answer text? " + whichQuestion.i);
 
-			aChoice = $(whichQuestion)[i];
-		   //aChoice = Object.keys(whichQuestion)[i];
-		   answerVal = $(whichQuestion)aChoice;
+			//aChoice = $(whichQuestion)[i];
+		   aChoice = Object.keys(whichQuestion)[i];
+		   //answerVal = $(whichQuestion).aChoice;
+		   answerVal = whichQuestion[aChoice];
 			console.log(" answerVal is " + answerVal);
 
-		   //document.getElementById(aChoice).innerHTML = answerVal;
+		   document.getElementById(aChoice).innerHTML = answerVal;
 		   console.log("a loop ");
 		};
 	};
