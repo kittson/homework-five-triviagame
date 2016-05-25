@@ -4,39 +4,39 @@
 
 var questions = [];
 var choiceFrenchRev = {
-    one: "five years, from 1790 through 1794",
-    two: "eleven years, from 1789 through 1799",
-    three: "two years, from 1888 through 1889",
-    four: "fifteen years, from 1794 through 1808"    
+    answerZero: "five years, from 1790 through 1794",
+    answerOne: "eleven years, from 1789 through 1799",
+    answerTwo: "two years, from 1888 through 1889",
+    answerThree: "fifteen years, from 1794 through 1808"    
 };
 
 var choiceJeSuisCharlie = {
-    one: "Je suis la liberté d\x27expression",
-    two: "Liberté, Égalité, Fraternité",
-    three: "Je Suis Charlie",
-    four: "We Are Charlie Hebdo"    
+    answerZero: "Je suis la liberté d\x27expression",
+    answerOne: "Liberté, Égalité, Fraternité",
+    answerTwo: "Je Suis Charlie",
+    answerThree: "We Are Charlie Hebdo"    
 };
 
 var choiceEiffel = {
-    one: "six inches",
-    two: "five feet",
-    three: "five centimeters",
-    four: "fifteen inches"    
+    answerZero: "six inches",
+    answerOne: "five feet",
+    answerTwo: "five centimeters",
+    answerThree: "fifteen inches"    
 };
 var answers = [];
 var congratulations = [];
 
 questions[0] = "The French Revolution was a time of political and social upheaval resulting in the overthrow of the French monarchy." +
 	"How many years and when did the French Revolution occur?";
-answers[0] = choiceFrenchRev.two;
+answers[0] = choiceFrenchRev.answerOne;
 
 questions[1] = "In January of 2015, twelve people were shot at the officies of the weekly newspaper \x22Charlie Hebdo\x22 " +
 	"in response to cartoons and articles satirizing Islamic terrorist groups.  " +
 	"What slogan spontaneously arose and became a popular expression of solidarity with the victims and the free speech cause?";
-answers[1] = choiceJeSuisCharlie.three;
+answers[1] = choiceJeSuisCharlie.answerTwo;
 
 questions[3] = "In the summer, how much taller is the Eiffel Tower than in the winter?";
-answers[3] = choiceEiffel.one;
+answers[3] = choiceEiffel.answerZero;
 
 // congratulations array for right answers
 congratulations[0] = "Excellent!";

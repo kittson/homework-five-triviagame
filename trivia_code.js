@@ -4,15 +4,30 @@ $(document).ready(function(){
 		location.href = "./game.html";
 	});
 
-	message = questions[0];	
-
+	message = questions[0];	// this is the question being asked
 	$('.question-message').text(message);
 
-	var checkBoxes = document.getElementsByName("theQuestion");
+	//var aChoice;
+	//var answerVal;
 
-	function setAnswer(event) {
-		document.body.style.background = event.target.value;
+	function setAnswers( whichQuestion) {
+		var aChoice;
+		var answerVal;
+		for (var i=0; i<Object.keys(whichQuestion).length; i++) {
+			// console.log("whichQuestion and length " + whichQuestion + Object.keys(whichQuestion).length);
+			//console.log("and the answer? " + Object.keys(whichQuestion)[i]);			
+			//console.log("and the answer text? " + whichQuestion.i);
+
+		   aChoice = Object.keys(whichQuestion)[i];
+		   answerVal = whichQuestion[aChoice];
+			//console.log(" answerVal is " + answerVal);
+
+		   document.getElementById(aChoice).innerHTML = answerVal;
+		};
 	};
+	
+	setAnswers(choiceFrenchRev);
+
 	function getRadioVal(form, name) {
 		var val;
 		// get list of radio buttons with specified name    

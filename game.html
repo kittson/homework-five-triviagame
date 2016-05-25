@@ -21,55 +21,49 @@
     <link rel="stylesheet" href="css/trivia.css">    
 
 </head>
-
 <body>
-
     <div class="bg-primary" >
         <div class="container">
             <div class="row">
                 <header>
                     <div class="header-content bg-primary">
-                        <div class="header-content-inner">
-                            Trivia
+                        <div class="header-content-inner text-center">
+                            French Trivia Game
                         </div>
                     </div>
                 </header>
             </div>
         </div>
     </div>
-
-
     <main class="row">
-      <div>
-       <img src="images/marianne.png" alt="delacroix liberte">
+      <div class="bg-primary">
+       <img class="pageImage" src="images/libertesmall.png" alt="delacroix liberte">
       </div>
       <div class="col-lg-8 col-lg-offset-2 text-center">
-          <h2 class="question-message"></h2>
-          <hr class="light">
-          <p class="text-faded">
-
-
-          </p>
-          
+          <h3 class="question-message"></h3>        
       </div>
-    </main>
-    
+    </main>    
     <section class="bg-dark" id="choicesArea">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <!-- <h2 class="section-heading">Click One Answer</h2> -->
-                    <hr class="light">
-                    
+                    <h4 class="section-heading">Marquer une réponse unique</h4>
+                    <hr class="light">                    
                         <form action="#" method="post" class="demoForm" id="demoForm">
                           <fieldset>
-                            <legend>Click One Answer</legend>      
-                              <p>
-                                <label><input type="radio" name="anAnswer" id="questionGroup" value="22" >Radio Box 1 </label>
-                                <label><input type="radio" name="anAnswer" id="questionGroup" value="44" >Radio Box 2 </label>
-                                <label><input type="radio" name="anAnswer" id="questionGroup" value="55" >Radio Box 3 </label>
-                              </p>
-                              <p><button type="button" name="getVal">Get Value of Selected</button></p>
+                            <!-- <legend>Click One Answer</legend>  -->     
+                              
+                                <p><input type="radio" name="anAnswer" value="22">
+                                <label id="answerZero"> </label></p>
+                                <p><input type="radio" name="anAnswer" value="22">
+                                <label for="answerOne"> </label></p>
+                                <p><input type="radio" name="anAnswer" value="22">
+                                <label for="answerTwo"> </label></p>
+                                <p><input type="radio" name="anAnswer" value="22">
+                                <label for="answerThree"> </label></p>
+                                
+                              
+                              <p><button class="btn btn-start btn-primary btn-xl" type="button" name="getVal">Submit Answer</button></p>
                           </fieldset>
                         </form>
                     
