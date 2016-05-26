@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
     <!-- <link rel="stylesheet" href="css/animate.min.css" type="text/css">  -->  
     <link rel="stylesheet" href="css/trivia.css">    
+
 </head>
 <body>
     <div class="bg-primary" >
@@ -58,24 +59,28 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h4 class="section-heading">Marquer une réponse unique</h4>
-                    <hr class="light"> 
-                    <!-- the slash causes the submit to look for something, don't know what  -->                  
-                    <!-- but it breaks 'cuz there is no where to go -->
-                    <form action="/anAnswer" method="post" id="choicesForm">
-                        <fieldset>
-                          <!-- <legend>Click One Answer</legend>  -->     
-                          <p><input type="radio" name="anAnswer" value="trueOrFalse">
+                    <hr class="light">                    
+                        <form action="#" method="post" class="demoForm" id="demoForm">
+                          <fieldset>
+                            <!-- <legend>Click One Answer</legend>  -->     
+                            <p><input type="radio" name="anAnswer" value="20">
                             <label id="answerZero"> </label></p>
-                          <p><input type="radio" name="anAnswer" value="trueOrFalse">
+                            <p><input type="radio" name="anAnswer" value="21">
                             <label id="answerOne"> </label></p>
-                          <p><input type="radio" name="anAnswer" value="trueOrFalse">
+                            <p><input type="radio" name="anAnswer" value="22">
                             <label id="answerTwo"> </label></p>
-                          <p><input type="radio" name="anAnswer" value="trueOrFalse">
+                            <p><input type="radio" name="anAnswer" value="23">
                             <label id="answerThree"> </label></p>   
-                          <p><input type="submit" id="submit" class="btn-start btn-xl btn-start btn-primary" value="Soumettre réponse"></p>                           
-                        </fieldset>
-                    </form>
-                </div>
+                            <p><input type="button" id="submitButton" class="btn-start btn-xl btn-start btn-primary" value="Soumettre réponse"></p>                                                           
+                            <!-- <p><input type="button" class="btn-start btn-xl btn-start btn-primary" value="Soumettre réponse" onClick="getRadioVal(demoForm, value)"></p> -->
+                            <!-- <p><input type="submit" onclick="getRadioVal();return(false);" name="save" value="Save" /></p> -->
+                            <!-- <p><input type="submit" onclick="submitFunc();return(false);" name="save" value="Save" /></p> -->
+                            <!-- <p><input type="submit" value="Soumettre réponse" id="submitButton" class="btn btn-start btn-primary btn-xl" name="getVal"></p> -->
+                          </fieldset>
+                        </form>
+                    
+
+              </div>
           </div>
       </div>
   </section>

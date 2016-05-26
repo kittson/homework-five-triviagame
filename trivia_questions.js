@@ -2,7 +2,13 @@
 //trivia_questions.js
 // putting these in here due to unwieldy length of things
 
+
+var congratulations = [];
 var questions = [];
+var answers = [];
+var imageForQuestions = ["images/libertesmall.png", "images/hebdo.png", "images/toureiffel.png"];
+var colorForBackground = ["background-color: #9D2322;", "background-color: #9D2322;", "background-color: #9D2322;"];
+
 var choiceFrenchRev = {
     answerZero: ["five years, from 1790 through 1794", false],
     answerOne: ["eleven years, from 1789 through 1799", true],
@@ -23,8 +29,8 @@ var choiceEiffel = {
     answerTwo: ["five centimeters", false],
     answerThree: ["fifteen inches", false]    
 };
-var answers = [];
-var congratulations = [];
+
+var choices = [choiceFrenchRev, choiceJeSuisCharlie, choiceEiffel];
 
 questions[0] = "The French Revolution was a time of political and social upheaval resulting in the overthrow of the French monarchy." +
 	"How many years and when did the French Revolution occur?";
