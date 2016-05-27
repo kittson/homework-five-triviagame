@@ -8,7 +8,19 @@ var questions = [];
 var answers = [];
 var imageForQuestions = ["images/libertesmall.png", "images/hebdo.png", "images/toureiffel.png"];
 var colorForBackground = ["background-color: #9D2322;", "background-color: #9D2322;", "background-color: #9D2322;"];
+// var questions = [
+//     {
+//         questions: "what color is the sky?",
+//         choices:["blue", "green","red","purple"]
+//         correctAnswer: "blue"
+//     },
+//     {
+//         questions: "what color is ans orange?",
+//         choices:["blue", "orange","red","purple"]
+//         correctAnswer: "orange"
+//     },
 
+// ];
 var choiceFrenchRev = {
     answerZero: ["five years, from 1790 through 1794", false],
     answerOne: ["eleven years, from 1789 through 1799", true],

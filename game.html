@@ -50,20 +50,19 @@
        <img class="pageImage" src="images/libertesmall.png" alt="delacroix liberte">
       </div>
       <div class="col-lg-8 col-lg-offset-2 text-center">
-          <h3 class="question-message"></h3>        
+          <h3 id="question-area" class="question-message"></h3>        
       </div>
     </main>    
     <section class="bg-dark" id="choicesArea">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
+               <!--  <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h4 class="section-heading">Marquer une réponse unique</h4>
                     <hr class="light"> 
-                    <!-- the slash causes the submit to look for something, don't know what  -->                  
-                    <!-- but it breaks 'cuz there is no where to go -->
+                   
                     <form action="/anAnswer" method="post" id="choicesForm">
                         <fieldset>
-                          <!-- <legend>Click One Answer</legend>  -->     
+          
                           <p><input type="radio" name="anAnswer" value="trueOrFalse">
                             <label id="answerZero"> </label></p>
                           <p><input type="radio" name="anAnswer" value="trueOrFalse">
@@ -75,10 +74,11 @@
                           <p><input type="submit" id="submit" class="btn-start btn-xl btn-start btn-primary" value="Soumettre réponse"></p>                           
                         </fieldset>
                     </form>
-                </div>
+                </div> -->
           </div>
       </div>
   </section>
+  <button id="submit-answer">Submit</button>
 
 
 
