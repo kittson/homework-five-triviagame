@@ -22,68 +22,57 @@
   <script type="text/javascript" src="trivia_questions.js"></script>
   <script type="text/javascript" src="trivia_code.js"></script>
 
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+  <!-- Bootstrap Core CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
 
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
-    <!-- <link rel="stylesheet" href="css/animate.min.css" type="text/css">  -->  
-    <link rel="stylesheet" href="css/trivia.css">    
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+  <!-- <link rel="stylesheet" href="css/animate.min.css" type="text/css">  -->  
+  <link rel="stylesheet" href="css/trivia.css">    
 </head>
 <body>
-    <div class="bg-primary" >
-        <div class="container">
-            <div class="row">
-                <header>
-                    <div class="header-content bg-primary">
-                        <div class="header-content-inner text-center">
-                            French Trivia Game
-                        </div>
-                    </div>
-                </header>
+  <div class="bg-primary" >
+    <div class="container">
+      <div class="row">
+        <header>
+          <div class="header-content bg-primary">
+            <div class="header-content-inner text-center">
+              French Trivia Game
             </div>
-        </div>
-    </div>
-    <main class="row">
-      <div class="bg-primary">
-       <img class="pageImage" src="images/libertesmall.png" alt="delacroix liberte">
-      </div>
-      <div class="col-lg-8 col-lg-offset-2 text-center">
-          <h3 id="question-area" class="question-message"></h3>        
-      </div>
-    </main>    
-    <section class="bg-dark" id="choicesArea">
-        <div class="container">
-            <div class="row">
-               <!--  <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h4 class="section-heading">Marquer une réponse unique</h4>
-                    <hr class="light"> 
-                   
-                    <form action="/anAnswer" method="post" id="choicesForm">
-                        <fieldset>
-          
-                          <p><input type="radio" name="anAnswer" value="trueOrFalse">
-                            <label id="answerZero"> </label></p>
-                          <p><input type="radio" name="anAnswer" value="trueOrFalse">
-                            <label id="answerOne"> </label></p>
-                          <p><input type="radio" name="anAnswer" value="trueOrFalse">
-                            <label id="answerTwo"> </label></p>
-                          <p><input type="radio" name="anAnswer" value="trueOrFalse">
-                            <label id="answerThree"> </label></p>   
-                          <p><input type="submit" id="submit" class="btn-start btn-xl btn-start btn-primary" value="Soumettre réponse"></p>                           
-                        </fieldset>
-                    </form>
-                </div> -->
           </div>
+        </header>
       </div>
-  </section>
-  <button id="submit-answer">Submit</button>
+    </div>
+  </div>
+  <main class="row">
+    <div class="bg-primary">
+     <img id="imageArea" class="pageImage">
+   </div>
+   <div class="col-lg-8 col-lg-offset-2 text-center">
+    <h3 id="question-area" class="question-message"></h3>        
+  </div>
+</main>    
+<div class="container">
+  <div class="row">
+    <div class="bg-dark col-lg-8 col-lg-offset-2 text-center">
+      <h4>Marquer une réponse unique</h4>
+      <hr class="light"> 
+    </div>
+    <section id="choicesArea" class="bg-dark col-lg-8 col-lg-offset-2 text-center"></section>
+    <div class="bg-dark col-lg-8 col-lg-offset-2 text-center">
+      <hr class="light"> 
+      <button id="submit-answer" class="button-mysubmit">Soumettre réponse</button>
+    </div>
+  </div>
+  <div class="row">
+  <!-- put the timer in here -->
+  </div>
+</div>
 
 
 
 
-  
 
 </body>
 

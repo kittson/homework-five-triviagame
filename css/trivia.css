@@ -116,4 +116,13 @@ legend { /* for the radio box area NOT USED */
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
     margin-top: 15px;
 }
+.button-mysubmit {
+    border-color: #9D2322;
+    color: #fff;
+    background-color: #9D2322;
+}
+.button-mysubmit:hover {
+    background-color: #384B58; /* gray blue */
+    color: white;
+}
 
