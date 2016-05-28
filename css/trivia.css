@@ -80,20 +80,12 @@ p {
 .bg-dark .cleared {
     clear: both;
 }
-.btn-default {
+/*.btn-default {
     border-color: #fff;
     color: #222;
     background-color: #fff;
-}
-.btn-primary {
-    border-color: #9D2322;
-    color: #fff;
-    background-color: #9D2322;
-}
-.btn:hover {
-    background-color: #384B58; /* gray blue */
-    color: white;
-}
+}*/
+
 .question-message { /* the current question */
  	color: #192D48;
 }
@@ -117,13 +109,27 @@ legend { /* for the radio box area NOT USED */
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
     margin-top: 15px;
 }
-.button-mysubmit {
-    border-color: #9D2322;
-    color: #fff;
+.button-mysubmit {    
+    color: #fff !important;
     background-color: #9D2322;
 }
-.button-mysubmit:hover {
-    background-color: #384B58; /* gray blue */
-    color: white;
+/*.button-mysubmit:hover {
+    background-color: #384B58;  gray blue 
+    color: #fff !important;
+    border-color: #000000;
+}*/
+.btn-primary {   
+    color: #fff !important;
+    background-color: #9D2322;    
+}
+
+.btn {   
+    color: #fff !important;
+    background-color: #9D2322;   
+}
+
+.btn-start {   
+    color: #fff !important;
+    background-color: #9D2322;    
 }
 
