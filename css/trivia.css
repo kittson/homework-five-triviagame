@@ -2,6 +2,7 @@
 	--lightest-value: #FFFFFF; /** plain white **/
 	--main-accent: #D33E0A; /** main accent red orange **/
 	--second-accent: #F65A29; /** brighter red orange **/
+    --muted-purple: #6A6087;
 }
 
 header {
