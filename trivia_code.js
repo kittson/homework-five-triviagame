@@ -9,7 +9,8 @@ var questions = [
 	   choices:["five years, from 1790 through 1794", "eleven years, from 1789 through 1799",
 	   "two years, from 1888 through 1889","fifteen years, from 1794 through 1808"],
 	   correctAnswer: "eleven years, from 1789 through 1799",
-	   imageForQuestions: "images/libertesmall.png"
+	   imageForQuestions: "images/libertesmall.png",
+	   color: "red"
 	 },
 	 {
 	   questions: "In January of 2015, twelve people were shot at the officies of the weekly newspaper \x22Charlie Hebdo\x22 " +
@@ -18,14 +19,17 @@ var questions = [
 	   choices:["Je suis la liberté d\x27expression", "Liberté, Égalité, Fraternité",
 	   "Je Suis Charlie","We Are Charlie Hebdo"],
 	   correctAnswer: "Je Suis Charlie",
-	   imageForQuestions: "images/hebdo.png"
+	   imageForQuestions: "images/hebdo.png",
+	    color: "green"
+
 	 },
 	 {	 
 	   questions: "In the summer, how much taller is the Eiffel Tower than in the winter?",
 	   choices:["six inches", "five feet",
 	   "five centimeters","fifteen inches"],
 	   correctAnswer: "six inches",
-	   imageForQuestions: "images/toureiffel.png"
+	   imageForQuestions: "images/toureiffel.png",
+	    color: "purple"
 	 },
 	 /*{
 	   questions: "Which non-French national designed the architecture for the Louvre?",
@@ -65,24 +69,31 @@ $(document).ready(function(){
    }
    function stop(){
       clearInterval(counter);
+      
     }
    function decrement(){
       number--;
       $('#displayTime').html('<h2>' + number + '</h2>');
       if (number === 0){
         stop();
+        number = 10;
+        questionNum++;
+         newQuestion(questionNum)
         //alert('Time Up!')               
       }
     }
 
 	function newQuestion(num){
-		
+		number = 10;
+		$('#displayTime').html('<h2>' + number + '</h2>');
 		$("#choicesArea").html("");
 		$("#imageArea").html("");
 		$("#question-area").html("<p>"+questions[num].questions+"</p>");
 		$("#messageArea").html("<h4>Please Mark One Answer</h4>");
 		$(".pageImage").attr("src", questions[num].imageForQuestions);
 		//console.log("questions num " + questions[num].imageForQuestions);
+		// $(".bg-primary").css("backgroundColor", questions[num].color);
+		$(".bg-primary").css({"background-color": questions[num].color});
 		runTimer();
 		for(var i =0; i < questions[num].choices.length; i++){
 			$("#choicesArea").append("<input value="+i+" name='choices' class='answers' type='radio'><label>"+ questions[num].choices[i]+"</label><br>")
@@ -94,26 +105,44 @@ $(document).ready(function(){
 
 	$("#submit-answer").click(function(event){
 		//console.log(event.preventDefault());
+		$("#error").html("");
+
 		console.log("answerChoice in submit " + answerChoice);
-		if (answerChoice === questions[questionNum].correctAnswer) {
+		if(!answerChoice){
+			$("#error").html("You must select an answer choice!");
+		} else if (answerChoice === questions[questionNum].correctAnswer) {
 			console.log("correcto");
 			goodAnswers++;
+			questionNum++;
+			if (questionNum < questions.length) {
+				stop();
+				answerChoice = null;
+				newQuestion(questionNum);			
+			}
+			else {			
+				clearQuestionsDisplayScore();			
+			}
 			
-		}
-		else {
+		} else if (answerChoice != questions[questionNum].correctAnswer){
+			console.log("baad");
 			badAnswers++;
+			questionNum++
+			if (questionNum < questions.length) {
+				stop();
+				answerChoice = null;
+				newQuestion(questionNum);			
+			}
+			else {			
+				clearQuestionsDisplayScore();			
+			}
 			//tallyResults.push("<p>Wrong Answer to the Question: " +questions[questionNum].questions+" </p><p>was</p><h4>" +answerChoice+ "/h4>");
 		}
-		questionNum++;
+
+		
 
 		//console.log("tallyResults " + tallyResults);
 		//console.log("length of questions " + questions.length);
-		if (questionNum < questions.length) {
-			newQuestion(questionNum);			
-		}
-		else {			
-			clearQuestionsDisplayScore();			
-		}
+		
 	});
 
 	
