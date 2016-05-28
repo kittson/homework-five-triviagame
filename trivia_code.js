@@ -27,7 +27,7 @@ var questions = [
 	   correctAnswer: "six inches",
 	   imageForQuestions: "images/toureiffel.png"
 	 },
-	 {
+	 /*{
 	   questions: "Which non-French national designed the architecture for the Louvre?",
 	   choices:["I. M. Pei", "Mies van der Rohe",
 	   "Zaha Hadid","Le Corbusier"],
@@ -40,7 +40,7 @@ var questions = [
 	   "\x22The Hunger\x22","\x22Breathless\x22"],
 	   correctAnswer: "\x22The Hunger\x22",
 	   imageForQuestions: "images/deneuve.png"
-	 },
+	 },*/
 ]; // questions
 
 //$('.bg-primary').css({'background-color':'blue'});​
