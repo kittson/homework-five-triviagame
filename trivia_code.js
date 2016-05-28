@@ -21,7 +21,6 @@ var questions = [
 	correctAnswer: "Je Suis Charlie",
 	imageForQuestions: "images/hebdo.png",
 	color: "#00AF48"
-
 },
 {	 
 	questions: "In the summer, how much taller is the Eiffel Tower than in the winter?",
@@ -32,22 +31,22 @@ var questions = [
 	color: "#D17624"
 },
 
-	 /*{
-	   questions: "Which non-French national designed the architecture for the Louvre?",
-	   choices:["I. M. Pei", "Mies van der Rohe",
-	   "Zaha Hadid","Le Corbusier"],
-	   correctAnswer: "I. M. Pei",
-	   imageForQuestions: "images/louvre.png"
-	   color: "#234463"
-	 },
-	 {
-	   questions: "Which cult movie did the iconic French actress, Catherine Deneuve, star in with David Bowie and Susan Sarandon?",
-	   choices:["\x22La Belle Epoch\x22", "\x22The Calling\x22",
-	   "\x22The Hunger\x22","\x22Breathless\x22"],
-	   correctAnswer: "\x22The Hunger\x22",
-	   imageForQuestions: "images/deneuve.png"
-	   color: "#6A6087"
-	},*/
+{
+   questions: "Which non-French national designed the architecture for the Louvre?",
+   choices:["I. M. Pei", "Mies van der Rohe",
+   "Zaha Hadid","Le Corbusier"],
+   correctAnswer: "I. M. Pei",
+   imageForQuestions: "images/louvre.png",
+   color: "#234463"
+},
+{
+   questions: "Which cult movie did the iconic French actress, Catherine Deneuve, star in with David Bowie and Susan Sarandon?",
+   choices:["\x22La Belle Epoch\x22", "\x22The Calling\x22",
+   "\x22The Hunger\x22","\x22Breathless\x22"],
+   correctAnswer: "\x22The Hunger\x22",
+   imageForQuestions: "images/deneuve.png",
+   color: "#6A6087"
+},
 ]; // questions
 
 //$('.bg-primary').css({'background-color':'blue'});​
@@ -60,7 +59,7 @@ $(document).ready(function(){
 	});
 	var questionNum = 0; //counts the number of questions
 	var answerChoice;
-	number = 10; // for the timer
+	number = 20; // for the timer
 	counter = 0; // for the timer's counter
 	goodAnswers = 0;
 	badAnswers = 0;
@@ -78,14 +77,14 @@ $(document).ready(function(){
 		$('#displayTime').html('<h2>' + number + '</h2>');
 		if (number === 0){
 			stop();
-			number = 10;
+			number = 20;
 			questionNum++;
 			newQuestion(questionNum);
 		}
 	}
 
 	function newQuestion(num){
-		number = 10;
+		number = 20;
 		
 		//fix up the display, including the new question
 		$('#displayTime').html('<h2>' + number + '</h2>');
@@ -96,7 +95,7 @@ $(document).ready(function(){
 		$(".pageImage").attr("src", questions[num].imageForQuestions);
 		$(".bg-primary").css({"background-color": questions[num].color});
 		//$("#submit-answer").html("<a>Submit Your Response</a>");
-		//$(".button-mysubmit").html("<a>Submit Your Response</a>");
+		$(".button-mysubmit").html("<h5>Submit Your Response</h5>");
 
 		//start the timer
 		runTimer();
@@ -111,6 +110,7 @@ $(document).ready(function(){
 	}//newQuestion
 
 	$("#submit-answer").click(function(event){
+		//$("#submit-answer").removeClass("btn-start");
 		//console.log(event.preventDefault());
 		$("#error").html("");
 		//
@@ -121,7 +121,7 @@ $(document).ready(function(){
 		//they click submit and there is a radio button selected
 		//this is for the correct answer
 		else if (answerChoice === questions[questionNum].correctAnswer) {
-			console.log("correcto");
+			//console.log("click correcto");
 			goodAnswers++;
 			questionNum++;
 
@@ -137,7 +137,7 @@ $(document).ready(function(){
 		//they click submit and there is a radio button selected
 		//they click and it's the wrong answer
 		else if (answerChoice != questions[questionNum].correctAnswer){
-			console.log("baad");
+			//console.log("click bad");
 			badAnswers++;
 			questionNum++;
 
@@ -151,8 +151,11 @@ $(document).ready(function(){
 			}
 		}
 	});//click event
-
-	// if (){		
+	
+	// if ( !answerChoice){
+	// 	console.log("no click");
+	// 	badAnswers++;
+	// 	questionNum++;		
 	// }
 
 	//this clears all the old question stuff when game is over and displays how many answers were right/wrong
@@ -168,14 +171,10 @@ $(document).ready(function(){
 		$("#messageArea").html("<h4>Game Over!</h4>");
 		$("#displayTime").remove();
 		$("#timeLeft").remove();
-		$("#submit-answer").remove();
+		//$("#submit-answer").remove();
 		//$("#submit-answer").addClass('btn-start');
 		//$(".button-mysubmit").html("<a>Click Me to Start!</a>");
-		//$("#submit-answer").addClass('btn-start').removeClass('button-mysubmit');
-		$(".button-mysubmit").remove();
-		//$("#submit-answer").html();
-
-		//offer to start again just didn't happen, sorry
-
+		$("#submit-answer").addClass('btn-start').removeClass('button-mysubmit');
+		$(".btn-start").html("<h5>Click Me to Start!</h5>");		
 	}
 });
